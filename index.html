@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo TP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulario de Animales del Zoo</h1>
+  <form id="animalForm">
+    Nombre: <input type="text" id="nombre" pattern="[A-Za-zÀ-ÿ\s]+" title="Solo letras y espacios" required><br>
+
+    Jaula (1-7): <input type="number" id="jaula" min="1" max="5" required><br>
+     Tipo:
+   <select id="tipo" required>
+     <option value="felino">Felino</option>
+     <option value="ave">Ave</option>
+     <option value="reptil">Reptil</option>
+     <option value="anfibio">Anfibio</option>
+     <option value="pez">Pez</option>
+     <option value="insecto">Insecto</option>
+     <option value="arácnido">Arácnido</option>
+   </select><br>
+    Peso (kg): <input type="number" id="peso" min="0.1" step="0.1" required><br>
+    <button type="submit">Agregar Animal</button>
+  </form>
+
+  <div id="resultadosTipos" style="margin-bottom: 30px;">
+   <h2>Resultados por Tipo de Animal</h2>
+   <p>Aves: <span id="contadorAves">0</span></p>
+   <p>Mamíferos: <span id="contadorMamiferos">0</span></p>
+   <p>Felinos: <span id="contadorFelinos">0</span></p>
+  </div>
+
+  <h2>Animales ingresados:</h2>
+  <table id="tablaAnimales">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Jaula</th>
+        <th>Peso (kg)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Se irán agregando filas aquí -->
+    </tbody>
+  </table>
+
+  
+
+  <script src="monito.js"></script>
+</body>
+</html>
